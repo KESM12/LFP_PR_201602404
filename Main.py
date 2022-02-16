@@ -1,20 +1,25 @@
-import CargarArch as CargarArchi
-a = CargarArchi
+from CargarArch import CargarArch
+a = CargarArch
 
 
-class Menu:
-    def Menu():
+class Aplicacion:
+    def __init__(self):
+        self.Menu()
+
+    def Menu(self):
         while (True):
-            print("--------Menu--------\n" +
+            num = input("--------Menu--------\n" +
             "1.- Cargar Data\n"+ 
             "2.- Cargar instrucciones\n"+ 
             "3.- Cargar Data\n"+
             "4.- Analizar\n"+ 
             "5.- Reportes\n"+
-            "6.- Salir")
-            num = input("Elija la opción: \n")
+            "6.- Salir\n"+
+            "Seleccione una de las opciones\n")
+            #num = input("Elija la opción: \n")
             if num == "1":
-               a.CargarArchi()
+               a.Leer(self, '.data')
+            #a.Analizar_1()
             elif num == "2":
                pass
             elif num == "3":
@@ -24,4 +29,9 @@ class Menu:
             elif num == "5":
                 pass
             elif num == "6":
+                print('Adios.')
                 break
+            else:
+                print('Ingrese una de las opciones por favor.')
+
+b = Aplicacion()
