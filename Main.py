@@ -1,19 +1,27 @@
+import CargarArch as CargarArchi
+a = CargarArchi
+
+
 class Menu:
     def Menu():
-        # p = principal() invocamos las opciones 
         while (True):
             print("--------Menu--------\n" +
             "1.- Cargar Data\n"+ 
             "2.- Cargar instrucciones\n"+ 
-            "3.- Cargar Data\n"+ )
-            
+            "3.- Cargar Data\n"+
+            "4.- Analizar\n"+ 
+            "5.- Reportes\n"+
+            "6.- Salir")
             num = input("Elija la opción: \n")
             if num == "1":
-                ruta = input("Nombre del archivo: ")
-                p.CargarData(ruta)
+               a.CargarArchi()
             elif num == "2":
-                ruta = input("Nombre del archivo: ")
-                p.CargaIns(ruta)
+               pass
             elif num == "3":
+                pass
             elif num == "4":
+                pass
             elif num == "5":
+                pass
+            elif num == "6":
+                break
