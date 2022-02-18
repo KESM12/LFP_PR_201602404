@@ -1,5 +1,5 @@
 from CargarArch import CargarArch
-a = CargarArch
+a = CargarArch()
 
 
 class Aplicacion:
@@ -11,24 +11,21 @@ class Aplicacion:
             num = input("--------Menu--------\n" +
             "1.- Cargar Data\n"+ 
             "2.- Cargar instrucciones\n"+ 
-            "3.- Cargar Data\n"+
-            "4.- Analizar\n"+ 
-            "5.- Reportes\n"+
-            "6.- Salir\n"+
+            "3.- Analizar\n"+
+            "4.- Reportes\n"+ 
+            "5.- Salir\n"+
             "Seleccione una de las opciones\n")
-            #num = input("Elija la opción: \n")
             if num == "1":
-               a.Leer(self, '.data')
-            #a.Analizar_1()
+               a.Leer('.data')
+               a.AnalizadorData()
             elif num == "2":
-               pass
+               a.Leer('.lfp')
+               a.AnalizadorInst()
             elif num == "3":
                 pass
             elif num == "4":
                 pass
             elif num == "5":
-                pass
-            elif num == "6":
                 print('Adios.')
                 break
             else:
