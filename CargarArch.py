@@ -19,12 +19,13 @@ class CargarArch():
         Tk().withdraw()
         try:
             filename = askopenfilename(title='Selecciona un archivo',
-                                            filetypes=[('Archivos', f'*{extension}'), # -> concatena -> *.data o *.lfp
+                                            filetypes=[('Archivos', f'*{extension}'), 
+                            # -> concatena -> *.data o *.lfp
                                                         ('All Files', '*')])
-            # print(filename)
+            #print(filename)
             with open(filename, encoding='utf-8') as infile:
                 x = infile.read().strip()
-            print(str(x))
+            #print(str(x))
         except:
             print('Error, no se ha seleccionado ningun archivo')
             return
