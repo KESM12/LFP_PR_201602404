@@ -9,7 +9,9 @@ class Aplicacion:
         self.Menu()
 
     def Menu(self):
+        
         while (True):
+
             num = input("--------Menu--------\n" +
             "1.- Cargar Data\n"+ 
             "2.- Cargar instrucciones\n"+ 

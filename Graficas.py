@@ -4,7 +4,7 @@ import numpy as np
 
 class Graficar:
 
-    def __init__(self, nombre, grafica, titulo = "", titulox = "", tituloy = "", ejex = [], ejey = [int()]):
+    def __init__(self, nombre, grafica, titulo = "", titulox = "", tituloy = "", ejex = [], ejey = []):
         self.nombre = nombre
         self.grafica = grafica
         self.titulo = titulo
@@ -33,7 +33,7 @@ class Graficar:
             #Titulo
             graf.title(self.titulo)
             graf.show()
-        elif TipoGraf == "pie":
+        elif TipoGraf == "pie" or TipoGraf == "pastel":
             int_ejey = np.array(self.ejey)
             int_ejey = int_ejey.astype(int)
             graf.pie(int_ejey, labels=self.ejex) # [30,23,45], ["producto 1", "producto 2", "producto 3"]
