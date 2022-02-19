@@ -180,7 +180,9 @@ class CargarArch():
             if 'nombre' in aux and 'grafica' in aux:
                 self.inst[self.codinst] = aux
                 self.codinst += 1
+                #print("hola ee")
                 print(self.inst)
+                
             else:
                 print("Error, no se puede almacenar esta informacion, faltan datos")                    
 

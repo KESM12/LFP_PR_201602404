@@ -34,7 +34,7 @@ class Aplicacion:
                 ejex = a.EjeX(num2)
                 ejey = a.EjeY(num2)
                 c = Graficar(nombre, grafica, titulo, titulox, tituloy, ejex, ejey)
-                c.Analizar()
+                c.Analizar(grafica)
             elif num == "4":
                 pass
             elif num == "5":
