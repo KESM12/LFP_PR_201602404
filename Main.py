@@ -1,6 +1,9 @@
+import webbrowser
 from re import I
 from CargarArch import CargarArch
 from Graficas import Graficar
+from RepHtml import Html
+t = Html
 a = CargarArch()
 
 
@@ -38,7 +41,10 @@ class Aplicacion:
                 c = Graficar(nombre, grafica, titulo, titulox, tituloy, ejex, ejey)
                 c.Analizar(grafica)
             elif num == "4":
-                pass
+                num2 = int(a.getProc())
+                instr = a.getinst(num2)
+                ejex = a.EjeX(num2)
+                t.EscHtml()              
             elif num == "5":
                 print('Adios.')
                 break

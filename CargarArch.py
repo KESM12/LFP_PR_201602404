@@ -13,24 +13,21 @@ class CargarArch():
         self.inst = {}
     
     def Leer(self, ext):
-        arch_da = "" #x
+        arch_da = "" 
         arch_ins = ""
         Tk().withdraw()
         try:
             filename = askopenfilename(title='Selecciona un archivo',
-                                            filetypes=[('Archivos', f'*{ext}'), # -> concatena -> *.data o *.lfp
+                                            filetypes=[('Archivos', f'*{ext}'), 
                                                         ('All Files', '*')])
             # print(filename)
             with open(filename, encoding='utf-8') as infile:
                 arch_da = infile.read().strip()
-            # print(str(arch_da))
+            print(str(arch_da)) #datos de la data
         except:
             print('Error, no se ha seleccionado ningun archivo')
             return
-        
-        #arch_da = arch_da.upper() # -> MAYUSCULAS
         arch_da = arch_da.lower() # -> minusculas
-
         com = False
         for letra in arch_da:
             if letra != '\"':
@@ -105,7 +102,7 @@ class CargarArch():
                             print("Error, no se puede leer este archivo")
                             break
                         data_list.append(lista)
-                        # print(lista)
+                        #print(lista)
                         data = ""
                         cori = False
                         cord = False
@@ -122,7 +119,7 @@ class CargarArch():
                 self.coddata += 1 
             else:
                 print("Error, no se puede leer este archivo")
-            print(self.data) #imprime la mamada que ingreso del archivo data
+            #print(self.data) 
     
     def AnalizadorInst(self):
         txt_inst = self.texto #txt_inst <-- cadena
@@ -156,7 +153,7 @@ class CargarArch():
                     nombre += letra
                 elif (letra == "," and caso == 1) or letra == "$":
                     if comando == 'nombre':
-                        aux[comando] = nombre  # {'nombre': "cambio1"}
+                        aux[comando] = nombre  
                     elif comando == 'grafica':
                         aux[comando] = nombre
                     elif comando == 'titulo':
@@ -180,7 +177,6 @@ class CargarArch():
             if 'nombre' in aux and 'grafica' in aux:
                 self.inst[self.codinst] = aux
                 self.codinst += 1
-                #print("hola ee")
                 print(self.inst)
                 
             else:
@@ -212,3 +208,8 @@ class CargarArch():
     def getinst(self, id):
         if id in self.inst:
             return self.inst[id]
+
+    def getProc(self):
+        for dato in self.data:
+            print(str(dato)+".", self.data[dato]['productos'])
+        
