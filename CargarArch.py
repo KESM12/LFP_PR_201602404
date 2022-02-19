@@ -204,7 +204,7 @@ class CargarArch():
     def getData(self):
         for dato in self.data:
             print(str(dato)+".", self.data[dato]['mes'])
-        res = input('Seleccione un opcion')
+        res = input('Seleccione una de las opciones: \n')
         return int(res)
     
     def getinst(self, id):
