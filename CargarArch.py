@@ -211,5 +211,5 @@ class CargarArch():
 
     def getProc(self):
         for dato in self.data:
-            print(str(dato)+".", self.data[dato]['productos'])
-        
+            #print(str(dato)+".", self.data[dato]['productos'])
+            print(self.data[dato]['productos'])

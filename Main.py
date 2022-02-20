@@ -1,9 +1,9 @@
-import webbrowser
 from re import I
+from numpy import product
 from CargarArch import CargarArch
 from Graficas import Graficar
-from RepHtml import Html
-t = Html
+from RepHtml import  Html2
+t = Html2
 a = CargarArch()
 
 
@@ -40,11 +40,16 @@ class Aplicacion:
                 ejey = a.EjeY(num2)
                 c = Graficar(nombre, grafica, titulo, titulox, tituloy, ejex, ejey)
                 c.Analizar(grafica)
+                
             elif num == "4":
-                num2 = int(a.getProc())
-                instr = a.getinst(num2)
-                ejex = a.EjeX(num2)
-                t.EscHtml()              
+                # pro = int(a.getProc())
+                # instr = a.getinst(pro)
+                # producto = instr['producto']
+                # precio = instr['precio']
+                # cantidadvendida = instr['venta']
+                # #ejex = a.EjeX()
+                # t = Html2(producto, precio, cantidadvendida)
+                t.EscHtml(self)              
             elif num == "5":
                 print('Adios.')
                 break

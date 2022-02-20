@@ -1,16 +1,14 @@
-
 import webbrowser
 
-
-class Html:
+class Html2:
     
     def __init__(self, producto = [], precUnit = [], cantVendi = []):
-        self.proudcto = producto #Producto self.ejex
+        self.producto = producto #Producto self.ejex
         self.precUnit = precUnit #Precio Unitario
         self.cantVendi = cantVendi #Cantidad vendida
 
     def EscHtml(self):
-        print(self.proudcto)
+        #print(self.producto)
         #Ganancia = precio * cantidad
 
         f = open('201602404.html','w')

@@ -14,7 +14,7 @@ class Graficar:
         self.ejey = ejey
 
     def Analizar(self, TipoGraf):
-        print(TipoGraf)
+        #print(TipoGraf)
         if TipoGraf == "barras" or TipoGraf == "barra":
             graf.bar(self.ejex, self.ejey) # ["producto 1", "producto 2", "producto 3"], [30,23,45]
             #Eje X
@@ -24,6 +24,11 @@ class Graficar:
             #Titulo
             graf.title(self.titulo)
             graf.show()
+            self.nombre = ""
+            self.grafica = ""
+            self.titulo = ""
+            self.titulox = ""
+            self.tituloy = ""
         elif TipoGraf == "lineas" or TipoGraf == "linea":
             graf.plot(self.ejex, self.ejey, color='orange', linestyle='dashed', linewidth=3) 
             #Eje X
